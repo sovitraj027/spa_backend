@@ -1,0 +1,445 @@
+@import "var";
+
+#highlight {
+  .website-content {
+    span {
+      padding-top: 3rem;
+      font-family: "Raleway";
+      font-size: 14px;
+    }
+  }
+  .website-info-content {
+    margin-top: 60px;
+    .primary-image {
+      padding-right: 60px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    h3 {
+      font-size: 24px;
+      line-height: normal;
+      margin-bottom: 20px;
+    }
+    .about-us-description {
+      ul {
+        // @include MarPad();
+        li {
+          list-style: none;
+          padding: 5px 0 0 22px;
+          line-height: 24px;
+          &::before {
+            font-family: "FontAwesome";
+            content: "\f57d";
+            margin: 0 5px 0 -25px;
+            font-style: normal;
+            color: "#808080";
+            font-weight: normal;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about-us-information {
+  padding-left: 10px;
+}
+
+#therapy-chart {
+  @keyframes loading-1 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
+  @keyframes loading-2 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(144deg);
+      transform: rotate(90deg);
+    }
+  }
+  @keyframes loading-3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(110deg);
+    }
+  }
+  @keyframes loading-4 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(36deg);
+      transform: rotate(36deg);
+    }
+  }
+  @keyframes loading-5 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(126deg);
+      transform: rotate(126deg);
+    }
+  }
+  .progress {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    background: none;
+    margin: 0 auto;
+    box-shadow: none;
+    position: relative;
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 5px solid rgb(37, 9, 41);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    >span {
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+    }
+    .progress-left {
+      left: 0;
+      .progress-bar {
+        left: 100%;
+        border-top-right-radius: 80px;
+        border-bottom-right-radius: 80px;
+        border-left: 0;
+        -webkit-transform-origin: center left;
+        transform-origin: center left;
+      }
+    }
+    .progress-bar {
+      width: 100%;
+      height: 100%;
+      background: none;
+      border-width: 5px;
+      border-style: solid;
+      position: absolute;
+      top: 0;
+    }
+    .progress-right {
+      right: 0;
+      .progress-bar {
+        left: -100%;
+        border-top-left-radius: 80px;
+        border-bottom-left-radius: 80px;
+        border-right: 0;
+        -webkit-transform-origin: center right;
+        transform-origin: center right;
+        animation: loading-1 1.8s linear forwards;
+      }
+    }
+    .progress-value {
+      width: 85%;
+      height: 85%;
+      border-radius: 50%;
+      // border: 2px solid #ebebeb;
+      font-family: "lato", sans-serif;
+      font-size: 20px;
+      line-height: 125px;
+      text-align: center;
+      position: absolute;
+      top: 7.5%;
+      left: 7.5%;
+    }
+  }
+  .progress.blue {
+    .progress-bar {
+      border-color: #ffffff;
+    }
+    .progress-value {
+      color: #ffffff;
+    }
+    .progress-left {
+      .progress-bar {
+        animation: loading-2 1.5s linear forwards 1.8s;
+      }
+    }
+  }
+  .progress.yellow {
+    .progress-bar {
+      border-color: #ffffff;
+    }
+    .progress-value {
+      color: #ffffff;
+    }
+    .progress-left {
+      .progress-bar {
+        animation: loading-3 1s linear forwards 1.8s;
+      }
+    }
+  }
+  .progress.pink {
+    .progress-bar {
+      border-color: #ffffff;
+    }
+    .progress-value {
+      color: #ffffff;
+    }
+    .progress-left {
+      .progress-bar {
+        animation: loading-4 0.4s linear forwards 1.8s;
+      }
+    }
+  }
+  .progress.green {
+    .progress-bar {
+      border-color: #ffffff;
+    }
+    .progress-value {
+      color: #ffffff;
+    }
+    .progress-left {
+      .progress-bar {
+        animation: loading-5 1.2s linear forwards 1.8s;
+      }
+    }
+  }
+  @media only screen and (max-width: 990px) {
+    .progress {
+      margin-bottom: 20px;
+    }
+  }
+  
+  .fullwidth-section-one {
+    background-image: url("https://spalabdev.wpengine.com/wp-content/uploads/2014/05/x-cross.png");
+    background-repeat: repeat;
+    padding-top: 65px;
+    padding-bottom: 30px;
+    background-attachment: fixed;
+    background-position: 50% 70px;
+    color: #fff;
+    background-color: $primary-color;
+
+    h5 {
+      text-align: center;
+      justify-content: center;
+      color: #fff !important;
+      font-size: 20px !important;
+      font-family: "Raleway", sans-serif;
+      padding-bottom: 20px;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+    .progressBar-info {
+      p {
+        text-align: center !important;
+        justify-content: center !important;
+        font: 14px "Raleway";
+        padding: 30px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+#aboutus-progress {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 146px;
+  position: relative;
+  z-index: 1;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .counter {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 0 35px;
+    border: 1px dashed $primary-color;
+    h2 {
+      color: #000;
+      font-size: 60px;
+      font-weight: bold;
+      line-height: normal;
+      margin: 0 0 25px;
+      position: relative;
+      font-family: "Raleway", sans-serif;
+    }
+    h5 {
+      color: #000;
+      font-size: 22px;
+      margin-bottom: 0;
+      padding: 5px 0 0;
+      position: relative;
+      span {
+        background-color: $primary-color;
+        height: 2px;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: -14px;
+        width: 130px;
+        &::before {
+          background-image: url(https://spalabdev.wpengine.com/wp-content/themes/spalab/skins/purple/images/floral-head-bg@2x.png);
+          background-size: 74px 51px;
+          left: -50px;
+          top: -30px;
+          content: "";
+          height: 51px;
+          margin: auto;
+          position: absolute;
+          width: 74px;
+        }
+        &::after {
+          background-image: url(https://spalabdev.wpengine.com/wp-content/themes/spalab/skins/purple/images/floral-head-bg@2x.png);
+          background-size: 74px 51px;
+          right: -50px;
+          top: -24px;
+          content: "";
+          height: 51px;
+          margin: auto;
+          position: absolute;
+          width: 74px;
+          transform: rotateY(180deg);
+        }
+      }
+    }
+  }
+}
+
+#therapy-chart {
+  .fullwidth-section-two {
+    background-image: url("https://cardiogenix.com/wp-content/uploads/2016/07/stones_candles_aromatherapy_spa_water_bamboo_massage_67321_1920x1080.jpg");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    // background-position: 50% 70px;
+    color: rgb(255, 255, 255);
+    .overlay{
+      background-color: #000000b4;
+      padding: 65px 0px;
+      h4 {
+        font-family: "Raleway";
+        font-weight: normal;
+        font-size: 18px;
+        margin-bottom: 25px;
+      }
+  
+      h5 {
+        font-weight: normal;
+        font-family: "Raleway";
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+#client-container {
+  .swiper {
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    // margin: 100px 0px;
+  }
+  .nav-tabs {
+    .nav-link {
+      border-top: 3px solid #3f3f3f;
+      border-radius: 0;
+      margin-left: 10px;
+      background-color: #d9d9d970;
+      border-left: 1px solid #dee2e6;
+      border-right: 1px solid #dee2e6;
+      color: #000;
+      font-family: "Raleway";
+      transition: all 0.3s ease-in-out;
+    }
+    .nav-link.active {
+      border-top: 3px solid $primary-color;
+      border-radius: 0;
+      background-color: #fff;
+    }
+  }
+  .tab-content > .active {
+    padding: 25px;
+    border-left: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    font-family: "Raleway";
+  }
+  .item {
+    cursor: pointer;
+    .item-image {
+      img {
+        border-radius: 50% !important;
+        border: 5px solid $primary-color;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          transform: rotate(20deg);
+          transition-duration: 0.5s;
+        }
+      }
+    }
+    .item-content {
+      border: 1px solid #dee2e6;
+      padding: 15px;
+      margin-left: 10px;
+      border-top: 3px solid $primary-color;
+    }
+  }
+
+  .testimonial-slider {
+    position: relative;
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 1rem;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      top: -20% !important;
+      display: block;
+      padding: 10px;
+      transition: all 0.3s ease-in-out;
+      padding: 6px 15px !important;
+      display: flex;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      color: $primary-color;
+      font-weight: 700;
+      &:hover {
+        background-color: $primary-color;
+        color: $color-white;
+      }
+    }
+    .swiper-button-prev {
+      left: 86% !important;
+    }
+  }
+}

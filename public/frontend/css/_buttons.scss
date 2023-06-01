@@ -1,0 +1,36 @@
+.btn-first {
+  z-index: 10;
+  background-color: rgb(38, 57, 68);
+  height: auto;
+  width: auto;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 0px;
+  font-weight: 300;
+  font-size: 16px;
+  padding-left: 40px;
+  border-radius: 3px;
+  padding-right: 40px;
+  border-width: 0px;
+  &:hover {
+    background-color: rgba($color: white, $alpha: 1);
+    color: #72448d;
+  }
+}
+.btn-second {
+  background-color: #72448d;
+  padding: 8px 40px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  text-transform: capitalize;
+  margin: 10px 0px 0px;
+
+  &:hover {
+    color: #72448d;
+    background-color: white;
+  }
+}

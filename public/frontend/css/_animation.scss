@@ -1,0 +1,33 @@
+@mixin slide-left {
+  animation: slide-left 1s forwards;
+  @keyframes slide-left {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+}
+@mixin slide-down {
+  animation: slide-top 1.5s forwards;
+  @keyframes slide-top {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+}
+@mixin slide-top {
+  animation: slide-top 2.5s forwards;
+  @keyframes slide-top {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(-0%);
+    }
+  }
+}

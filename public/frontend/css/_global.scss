@@ -1,0 +1,228 @@
+@import "var";
+//typography
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Tangerine:wght@400;700&display=swap");
+html{
+  scroll-behavior: smooth;
+}
+body {
+  background: $color-white;
+  color: $text-color;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+  // font-family: 'Tangerine', cursive;
+  //   font-family: 'Lato', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+//
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+  color: $text-color-one;
+}
+
+@mixin MarPad {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style: none;
+}
+.section-padding {
+  padding: 45px 0px;
+  @media screen and (min-width: 991px) {
+    padding: 90px 0px;
+  }
+}
+.section-margin {
+  padding: 80px 0px;
+}
+.section-title {
+  h2 {
+    font-size: 36px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    font-weight: 300;
+    text-transform: capitalize;
+  }
+  span {
+    color: #787878;
+    display: block;
+    font-size: 27px;
+    font-style: normal;
+    line-height: 30px;
+    margin: 0;
+    font-family: "Tangerine", cursive;
+    font-weight: 300;
+  }
+  @media screen and (max-width: 480px) {
+    img {
+      width: 50%;
+    }
+  }
+}
+
+.social-links {
+  display: flex;
+  align-items: flex-start;
+  li {
+    a {
+      i {
+        border: 1px solid #303030;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background-color: $primary-color;
+          color: $text-color-one;
+          // border: 1px solid $text-color-one;
+        }
+      }
+    }
+  }
+}
+
+.breadcrumb-item.active {
+  color: rgb(255, 255, 255);
+}
+#breadcrumb-container {
+  padding: 40px 0 5px 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0px 5px 13px #888888;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $secondary-color;
+    opacity: .4;
+    z-index: -1;
+  }
+  .current-page {
+    filter: brightness(0) invert(1);
+    .breadcrumb {
+      color: $color-white;
+      padding: 30px 0 0 0;
+      li {
+        a {
+          color: $color-white;
+        }
+      }
+    }
+  }
+  h1 {
+    font-size: 52px;
+    color: $color-white;
+    font-weight: normal !important;
+  }
+}
+
+.column-title{
+  h6 {
+    font-family: 'Raleway' sans-serif !important;
+    font-size: 28px !important;
+    font-weight: normal;
+    position: relative;
+    color: $secondary-color;
+    &::after{
+      position: absolute;
+      content: "";
+      left: 0px;
+      bottom: -8px;
+      width: 100px;
+      height: 3px;
+      background-color: $secondary-color;
+    }
+  }
+}
+
+.product-sub-header {
+  h6 {
+    margin-top: 50px;
+    font-family: 'Raleway' sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  border-bottom: 1px solid rgba(145, 145, 145, 0.753);
+}
+
+.pagination {
+  justify-content: end;
+  .page-item {
+    margin-left: 10px;
+    border-color:$secondary-color;
+    a {
+      font-family: 'Raleway';
+      font-weight: 600;
+      border: 1px solid $secondary-color;
+      color: $text-color-one;
+      border-radius: 4px;
+      padding: 8px 15px;
+      background-color:$secondary-color;
+      transition: .3s all ease-in-out;
+     &:hover{
+       background-color: $secondary-color;
+     }
+     &:focus {
+      box-shadow: none !important;
+      outline: none !important;
+      
+    }
+    }
+    // .page-link.active{
+    //   color: $text-color-one;
+    //   background-color: transparent;
+    //  }
+  }
+  .page-item.disabled .page-link{
+    font-family: 'Raleway';
+      font-weight: 600;
+      border: 1px solid $secondary-color;
+      color: $text-color-one;
+      border-radius: 4px;
+      padding: 8px 15px;
+      background-color:$secondary-color;
+      transition: .3s all ease-in-out;
+  }
+  .page-item.active{
+    .page-link{
+      color: $text-color-one;
+      background-color: transparent;
+      border-radius: 4px;
+      padding: 8px 15px;
+      border: 1px solid $secondary-color;
+    }
+  }
+
+}
+
+
+

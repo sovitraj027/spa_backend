@@ -1,0 +1,279 @@
+#service__main-container {
+  overflow: hidden;
+  height: auto;
+  .service__title {
+    h1 {
+      position: relative;
+
+      &::before {
+        position: absolute;
+      }
+    }
+  }
+
+  .side__menu-bar {
+    .side__menu-title {
+      h4 {
+        font-weight: 700;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 9rem;
+          height: 2px;
+          background-color: $text-color-one;
+        }
+      }
+    }
+    ul {
+      @include MarPad();
+      li {
+        margin: 20px 0;
+        a {
+          .icon {
+            width: 3rem;
+            margin-right: 1rem;
+            background-color: $text-color-one;
+            transition: 0.3s all ease-in-out;
+            padding: 5px;
+            img {
+              filter: invert(100%);
+            }
+          }
+          .side__menu-text {
+            span {
+              color: $text-color-one;
+              font-weight: 600;
+              font-size: 18px;
+              transition: 0.3s all ease-in-out;
+            }
+          }
+        }
+        &:hover {
+          .side__menu-text {
+            span {
+              color: $secondary-color;
+              position: relative;
+            }
+          }
+          .icon {
+            background-color: $secondary-color;
+          }
+        }
+      }
+      li.active {
+        a {
+          .icon {
+            background-color: $secondary-color;
+          }
+          .side__menu-text {
+            span {
+              color: $secondary-color;
+              position: relative;
+              &::before {
+                content: "";
+                position: absolute;
+                bottom: -15px;
+                left: 0;
+                width: 8rem;
+                height: 1px;
+                background-color: $secondary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .service__card-holder {
+    .service__card {
+      .service__card-img {
+        width: 100%;
+        height: 17rem;
+        img {
+          height: 100%;
+          border-radius: 15px 0;
+          filter: drop-shadow(5px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+      }
+      .service__card-content {
+        h4 {
+          font-size: 18px;
+          font-weight: 900;
+        }
+        p {
+          font-size: 14px;
+          color: $text-color-one;
+        }
+        .btn {
+          background-color: $secondary-color;
+          border-color: $secondary-color;
+          color: $text-color-one;
+          font-weight: 600;
+          transition: 0.3s all ease-in-out;
+          &:focus {
+            box-shadow: none;
+          }
+          &:hover {
+            box-shadow: rgba(128, 111, 55, 0.25) 0px 30px 60px -12px inset,
+              rgba(177, 130, 59, 0.3) 0px 18px 36px -18px inset;
+          }
+        }
+      }
+    }
+  }
+}
+
+//service-detail css
+#service__detail-container {
+  .service__detail-title {
+    h1 {
+      font-size: 50px;
+    }
+  }
+  p,
+  span {
+    font-size: 16px;
+  }
+  .service__long-desc {
+    p {
+      text-align: justify;
+    }
+  }
+  .service__desc {
+    p {
+      text-align: justify;
+    }
+  }
+  ul {
+    @include MarPad();
+    li {
+      font-size: 16px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+  }
+
+  .line_holder {
+    @media screen and (max-width: 1400px) {
+      display: none;
+    }
+  }
+}
+
+//package css
+.service__short-desc {
+  p {
+    font-size: 16px;
+  }
+}
+#service__package-container {
+  .card {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background-color: #f7f7d7;
+    .card-sub-title {
+      font-size: 24px;
+      color: $text-color-one;
+    }
+    .card-text {
+      font-size: 16px;
+    }
+    .btn {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+      color: $text-color-one;
+      font-size: 20px;
+      // width: 80%;
+      transition: 0.3s all ease-in-out;
+      margin-top: 20px;
+      &:hover {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+    }
+  }
+}
+.modal-footer {
+  .btn {
+    // width: 30% !important;
+    padding: 10px 20px;
+  }
+}
+
+// gift and package css
+.service__gift-section {
+  background-image: url("https://d375139ucebi94.cloudfront.net/za/business_placeholders/day-spa-67931ca9216a44959a3a3957453d0cec.day-spa");
+  // background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  .gift-container {
+    background-color: rgba(0, 0, 0, 0.398);
+    padding: 100px 40px;
+    border-radius: 10px;
+    label {
+      color: $color-white;
+      font-size: 18px;
+    }
+    .form-control {
+      padding: 15px;
+      font-size: 18px;
+    }
+    .package__btn {
+      .btn {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+        padding: 10px 30px;
+        // width: 20%;
+        color: $text-color;
+        font-size: 22px;
+        border-radius: 0;
+        transition: 0.3s all ease-in-out;
+        &:hover {
+          color: $color-white;
+          box-shadow: rgba(255, 255, 255, 0.25) 0px 6px 12px -2px,
+            rgba(255, 255, 255, 0.3) 0px 3px 7px -3px;
+        }
+      }
+    }
+  }
+}
+
+//new year gift and card css
+.services__gift-card-container {
+  padding: 50px 70px;
+  .card {
+    border-radius: 10px;
+    box-shadow: rgba(63, 38, 38, 0.25) 0px 6px 12px -2px,
+      rgba(73, 43, 43, 0.3) 0px 3px 7px -3px;
+    background-color: #f7f7d7;
+    img {
+      border-radius: 10px;
+    }
+    .card-title {
+      margin-bottom: 20px;
+      del {
+        color: $text-color;
+        padding-left: 10px;
+      }
+    }
+    .card-sub-title {
+      margin-bottom: 40px;
+    }
+    .btn {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+      border-radius: 0;
+      padding: 10px 30px;
+      font-size: 18px;
+      transition: 0.3s all ease-in-out;
+      &:hover {
+        color: $text-color-one;
+        box-shadow: rgba(63, 38, 38, 0.25) 0px 6px 12px -2px,
+          rgba(73, 43, 43, 0.3) 0px 3px 7px -3px;
+      }
+    }
+  }
+}

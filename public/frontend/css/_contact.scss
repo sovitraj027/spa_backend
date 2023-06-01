@@ -1,0 +1,60 @@
+@import "var";
+
+#contact-form {
+  .container {
+    .form-control {
+      padding: 1em 0.75em !important;
+      margin: 15px 0 0 0;
+      display: block;
+      // font-family: $Raleway;
+      font-size: 16px;
+      // border-radius: 6px !important;
+
+      &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+        // background-color: $color-white;
+      }
+    }
+
+    .btn {
+      float: right;
+      align-items: flex-end;
+      text-align: end;
+      margin: 20px 0;
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+      font-family: 'Raleway';
+      font-size: 13px;
+      padding: 11px 20px;
+      &:hover {
+        background-color: $text-color;
+        border-color: $text-color;
+        transition: 0.3s ease-in-out;
+      }
+    }
+
+    .g-map {
+      iframe {
+        margin: 15px 0;
+      }
+    }
+
+    .address-holder {
+      margin: 15px 0;
+      .holder{
+        .icon{
+          i{
+            color: $secondary-color;
+          }
+        }
+        .description{
+          span{
+            font-size: 16px;
+            color: $text-color-one;
+          }
+        }
+      }
+    }
+  }
+}

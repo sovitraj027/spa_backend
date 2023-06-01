@@ -1,0 +1,320 @@
+@import "var";
+
+#breadcrumb-container {
+  .career-page-heading {
+    h4 {
+      font-family: "Raleway";
+      color: $color-white;
+      font-weight: bolder;
+      font-size: 30px;
+      span {
+        color: yellow;
+      }
+    }
+  }
+  .career-search-section {
+    padding: 10px 0 50px 0;
+    .form-control {
+      padding: 0;
+      margin: 0;
+      &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+        border-color: $text-color-one;
+      }
+    }
+    .form-select {
+      &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+        border-color: $color-white;
+      }
+    }
+    .input-group-text {
+      color: $primary-color;
+    }
+    .btn {
+      color: #000;
+      background-color: $color-white;
+      border-color: $text-color;
+      transition: 0.3s all ease-out;
+
+      &:hover {
+        color: $color-white;
+        background-color: $primary-color;
+        border-color: $primary-color;
+      }
+      &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+        border-color: $text-color-one;
+      }
+    }
+  }
+}
+.job-category-table {
+  h5 {
+    padding-left: 5px;
+  }
+  ul {
+    @include MarPad;
+    border-top: 1px solid #dedede;
+    li {
+      list-style: none;
+      padding-left: 5px;
+    }
+  }
+}
+#Job-display-section {
+  .job-card-view {
+    .card {
+      border-radius: 0;
+      transition: 0.3s all ease-in-out;
+      img {
+        width: 100px;
+        height: 95px;
+        border: 1px solid #dedede;
+        margin: 35px 0 20px 10px;
+      }
+
+      .card-body {
+        padding: 0 5px 0 0 !important;
+        margin: 0 !important;
+        h5 {
+          font-size: 16px;
+          font-weight: 500;
+          margin-top: 1rem;
+          margin-bottom: 3px;
+        }
+        h4 {
+          font-size: 16px;
+          font-weight: 700;
+        }
+        .job-apply-btn {
+          .btn {
+            background-color: $primary-color;
+            border-color: $primary-color;
+            border-radius: 0;
+            font-weight: 600;
+            transition: 0.3s all ease-in;
+            float: right;
+            &:focus {
+              box-shadow: none;
+            }
+          }
+        }
+        .text-breakt {
+          color: #000;
+          font-weight: 500;
+          font-size: 13px;
+        }
+        .working-time {
+          background-color: $primary-color;
+          color: $color-white;
+          padding: 8px 8px;
+          border-left: 2px solid rgb(190, 190, 190);
+        }
+        a {
+          color: #000;
+          transition: 0.3s all ease-in-out;
+          &:hover {
+            color: $primary-color;
+          }
+        }
+        .modal-view {
+          i {
+            background-color: $primary-color;
+            padding: 8px;
+            color: $color-white;
+            margin-top: 22px;
+            margin-bottom: 5px;
+            float: right;
+          }
+        }
+        .rate {
+          &:not(:checked) > input {
+            display: none;
+          }
+          &:not(:checked) > label {
+            float: right;
+            width: 1em;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: pointer;
+            font-size: 30px;
+            color: #ccc;
+            position: absolute;
+            top: 10px;
+            left: 97%;
+          }
+          &:not(:checked) > label:before {
+            content: "★ ";
+            color: #ffc700;
+          }
+        }
+      }
+
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: $primary-color;
+        h5 {
+          color: $color-white;
+        }
+        h4 {
+          color: $color-white;
+        }
+        p {
+          color: $color-white;
+        }
+        span {
+          color: $color-white;
+        }
+        .text-breakt {
+          color: $color-white;
+          a {
+            color: $color-white;
+          }
+        }
+
+        img {
+          background-color: $color-white;
+        }
+        .card-body {
+          color: $color-white;
+        }
+        .job-apply-btn {
+          .btn {
+            background-color: $color-white;
+            color: $primary-color;
+          }
+        }
+        .modal-view {
+          i {
+            background-color: $color-white;
+            color: $primary-color;
+          }
+        }
+      }
+      #more {
+        display: none;
+      }
+    }
+  }
+  .accordion-button {
+    background-color: $primary-color;
+    color: $color-white;
+    &:not(.collapsed) {
+      background-color: $primary-color !important;
+      color: $color-white;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+    &::after {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #Job-display-section {
+    .job-card-view {
+      .card {
+        .card-body {
+          padding-left: 15px !important;
+        }
+      }
+    }
+  }
+}
+
+// career Detail css
+#career-detail-page {
+  .card {
+    border: none;
+    img {
+      width: 120px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    h5 {
+      font-size: 18px;
+    }
+    .pg-text-black {
+      font-size: 13px;
+      i {
+        color: #000;
+        font-size: 16px;
+        padding-left: 5px;
+      }
+    }
+  }
+  .career-skill-section {
+    .skill-list {
+      ul {
+        @include MarPad;
+        li {
+          list-style: none;
+          // margin: 5px 10px 5px 0px;
+          padding: 5px 10px;
+          background-color: #edeff7;
+          margin-right: 10px;
+          margin-top: 10px;
+          border-bottom-left-radius: 50;
+          border-radius: 21px;
+        }
+      }
+    }
+  }
+  .job-description-title {
+    h6 {
+      margin-top: 50px;
+      font-family: "Raleway" sans-serif !important;
+      font-size: 20px !important;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+  }
+  .job-description {
+    ul {
+      color: #000;
+      line-height: 35px;
+    }
+    .favroite-button-section {
+      .btn {
+        background-color: $color-white;
+        border: 1px solid #dedede;
+        padding: 10px 25px 10px 25px;
+        border-radius: 10px;
+        color: $text-color;
+        transition: 0.3s all ease-out;
+        &:hover {
+          color: $primary-color;
+        }
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .sub-bar-menu {
+    .btn {
+      width: 100%;
+      background-color: $color-white;
+      border-color: $primary-color;
+      color: $primary-color;
+      font-weight: 600;
+      padding: 12px;
+      text-transform: capitalize;
+      &:hover {
+        background-color: $primary-color;
+        color: $color-white;
+      }
+    }
+    .job-overview {
+      .job-overview-body {
+        width: 100%;
+        border: 2px solid #dedede;
+      }
+    }
+  }
+}

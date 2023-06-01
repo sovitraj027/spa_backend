@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha512-Dop/vW3iOtayerlYAqCgkVr2aTr2ErwwTYOvRFUpzl2VhCMJyjQF0Q9TjUXIo6JhuM/3i0vVEt2e/7QQmnHQqw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .mega-dropdown,
+        .mega-dropdown-one {
+            width: 33.3%;
+            display: inline-block
+        }
+
+        .mega-dropdown-one,
+        .mega-dropdown-two {
+            position: static !important;
+            display: inline-block
+        }
+
+        .mega-dropdown {
+            background: linear-gradient(to right, #294594, #528ce4);
+        }
+
+        .mega-dropdown-one {
+            background: linear-gradient(to right, #07ddff, #16a28f);
+        }
+
+        .mega-dropdown-two {
+            background: linear-gradient(to right, #386ee8, #7da0de);
+            color: #fff;
+            width: 33.4%
+        }
+
+        .navbar-default .navbar-nav>.open>a,
+        .navbar-default .navbar-nav>.open>a:focus,
+        .navbar-default .navbar-nav>.open>a:hover {
+            background-color: #b3b2b2;
+            color: #fff
+        }
+
+        @media (max-width:769px) {
+
+            .mega-dropdown,
+            .mega-dropdown-one,
+            .mega-dropdown-two {
+                width: 100%;
+                display: inline-block
+            }
+
+            .mega-dropdown {
+                background-color: #2aaab6
+            }
+
+            .mega-dropdown-one {
+                position: static !important;
+                background-color: #f4af00
+            }
+
+            .mega-dropdown-two {
+                position: static !important;
+                background-color: #fb6e69;
+                color: #fff
+            }
+
+            .navbar-nav {
+                margin: 0;
+                text-align: center
+            }
+
+            .mega-dropdown-one .mega-dropdown-menu:after,
+            .mega-dropdown-one .mega-dropdown-menu:before,
+            .mega-dropdown-two .mega-dropdown-menu:after,
+            .mega-dropdown-two .mega-dropdown-menu:before {
+                display: none
+            }
+
+            .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+                color: #fff;
+                text-align: center
+            }
+        }
+
+        .mega-dropdown-menu {
+            padding: 20px 0;
+            width: 100%;
+            box-shadow: none;
+            -webkit-box-shadow: none
+        }
+
+        .mega-dropdown-one .mega-dropdown-menu:before {
+            content: "";
+            border-bottom: 15px solid #fff;
+            border-right: 17px solid transparent;
+            border-left: 17px solid transparent;
+            position: absolute;
+            top: -15px;
+            left: 48%;
+            z-index: 10
+        }
+
+        .mega-dropdown-one .mega-dropdown-menu:after {
+            content: "";
+            border-bottom: 17px solid #ccc;
+            border-right: 19px solid transparent;
+            border-left: 19px solid transparent;
+            position: absolute;
+            top: -17px;
+            left: 48%;
+            z-index: 8
+        }
+
+        .mega-dropdown-two .mega-dropdown-menu:before {
+            content: "";
+            border-bottom: 15px solid #fff;
+            border-right: 17px solid transparent;
+            border-left: 17px solid transparent;
+            position: absolute;
+            top: -15px;
+            left: 82%;
+            z-index: 10
+        }
+
+        .mega-dropdown-two .mega-dropdown-menu:after {
+            content: "";
+            border-bottom: 17px solid #ccc;
+            border-right: 19px solid transparent;
+            border-left: 19px solid transparent;
+            position: absolute;
+            top: -17px;
+            left: 82%;
+            z-index: 8
+        }
+
+        .mega-dropdown-menu>li>ul {
+            padding: 0;
+            margin: 0
+        }
+
+        .mega-dropdown-menu>li>ul>li {
+            list-style: none
+        }
+
+        .mega-dropdown-menu>li>ul>li>a {
+            display: block;
+            padding: 3px 20px;
+            clear: both;
+            font-weight: 400;
+            line-height: 1.428571429;
+            color: #999;
+            white-space: normal
+        }
+
+        .mega-dropdown-menu>li ul>li>a:focus,
+        .mega-dropdown-menu>li ul>li>a:hover {
+            text-decoration: none;
+            color: #444;
+            background-color: #f5f5f5
+        }
+
+        .mega-dropdown-menu .dropdown-header {
+            color: #428bca;
+            font-size: 18px;
+            font-weight: 700
+        }
+
+        .mega-dropdown-menu form {
+            margin: 3px 20px
+        }
+
+        .mega-dropdown-menu .form-group {
+            margin-bottom: 3px
+        }
+
+        @media (min-width:770px) {
+            .dropdown-menu>li>a {
+                text-align: center;
+                background: #ededed;
+                margin: 2px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+            </div>
+
+            <div class="collapse navbar-collapse js-navbar-collapse text-center collapse in" style="padding:0;">
+                <ul class="nav navbar-nav" style="float:none;">
+                    <li class="dropdown mega-dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" style="color:#fff;">Menu 1 </a>
+                    </li>
+                    <li class="dropdown mega-dropdown-one">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" style="color:#fff;">Menu 2 <i
+                                class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu mega-dropdown-menu row">
+                            <li class="col-sm-3">
+                                <a href="#">Submenu 1</a>
+                            </li>
+                            <li class="col-sm-3">
+                                <a href="#">Submenu 2</a>
+                            </li>
+                            <li class="col-sm-3">
+                                <a href="#">Submenu 3</a>
+                            </li>
+                            <li class="col-sm-3">
+                                <a href="#">Submenu 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown mega-dropdown-two">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" style="color:#fff;">Menu 3 <i
+                                class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu mega-dropdown-menu row">
+                            <li class="col-sm-3">
+                                <a href="#">Submenu 1</a>
+                            </li>
+                            <li class="col-sm-3">
+                                <a href="#">Submenu 2</a>
+                            </li>
+                            <li class="col-sm-3">
+                                <a href="#">Submenu 3</a>
+                            </li>
+                            <li class="col-sm-3">
+                                <a href="#">Submenu 4</a>
+                            </li>
+                            <li class="col-sm-3">
+                                <a href="#">Submenu 5</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.nav-collapse -->
+        </nav>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/js/bootstrap.min.js" integrity="sha512-Qpek3fOFi+uCW8qSf92lltHNMRMHmLISYDIRFI4qgNV2U28+4Zc3EZC8szMMeVI9KA3zEZFtIP8gt41Pekd29w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        $(document).on('click', '.mega-dropdown-one', function (e) {
+            e.stopPropagation()
+        })
+        $(document).on('click', '.mega-dropdown-two', function (e) {
+            e.stopPropagation()
+        })
+    </script>
+</body>
+
+</html>
